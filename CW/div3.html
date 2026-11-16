@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Names at Middle of Edges</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .outer-div {
+            position: relative;
+            width: 320px;
+            height: 320px;
+            background-color: lightgreen;
+            border-radius: 10px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            
+            /* 3x3 Grid to target the exact middle of each edge */
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            grid-template-rows: auto 1fr auto;
+            padding: 10px;
+        }
+
+        .edge-text {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Middle of Top Edge */
+        .edge-top {
+            grid-column: 2;
+            grid-row: 1;
+            justify-self: center;
+        }
+
+        /* Middle of Left Edge */
+        .edge-left {
+            grid-column: 1;
+            grid-row: 2;
+            align-self: center;
+        }
+
+        /* Middle of Right Edge */
+        .edge-right {
+            grid-column: 3;
+            grid-row: 2;
+            align-self: center;
+        }
+
+        /* Middle of Bottom Edge */
+        .edge-bottom {
+            grid-column: 2;
+            grid-row: 3;
+            justify-self: center;
+            align-self: end;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="outer-div">
+        <div class="edge-text edge-top">MIRAI</div>
+        <div class="edge-text edge-left">MIRAI</div>
+        <div class="edge-text edge-right">MIRAI</div>
+        <div class="edge-text edge-bottom">MIRAI</div>
+    </div>
+
+</body>
+</html>
