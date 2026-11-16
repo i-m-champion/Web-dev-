@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Names at All Corners</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .outer-div {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: lightgreen;
+            border-radius: 10px;
+            border: 1px solid black;
+            padding: 15px; 
+            box-sizing: border-box;
+            
+           
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .corner {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        
+        .top-left {
+            align-self: start;
+            justify-self: start;
+        }
+
+        .top-right {
+            align-self: start;
+            justify-self: end;
+        }
+
+        .bottom-left {
+            align-self: end;
+            justify-self: start;
+        }
+
+        .bottom-right {
+            align-self: end;
+            justify-self: end;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="outer-div">
+        <div class="corner top-left">MIRAI</div>
+        <div class="corner top-right">MIRAI</div>
+        <div class="corner bottom-left">MIRAI</div>
+        <div class="corner bottom-right">MIRAI</div>
+    </div>
+
+</body>
+</html>
