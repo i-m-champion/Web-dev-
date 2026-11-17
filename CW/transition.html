@@ -11,41 +11,60 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
+            background-color: #000000;
+            gap: 20px;
+        }
+        @keyframes morphAndSpin {
+            0% {
+                width: 200px;
+                height: 200px;
+                border-radius: 10px;
+                transform: rotate(0deg);
+            }
+            100% {
+                width: 250px;
+                height: 250px;
+                border-radius: 50%;
+                transform: rotate(360deg);
+            }
         }
 
         div {
-            width: 600px;
+            width: 300px;
             height: 300px;
             background-color: rgb(101, 190, 249);
-            transition: width 2s, height 2s, background-color 2s;
+            transition: width 2s, height 2s, background-color 2s, border-radius 2s;
             display: flex;
             justify-content: center;
             align-items: center;
-            transition-delay: 0.5s;
+            border: 2px solid white;
+            border-radius: 10px; 
         }
-        #div1 {transition-timing-function: linear;}
-        #div2 {transition-timing-function: ease;}
-        #div3 {transition-timing-function: ease-in;}
-        #div4 {transition-timing-function: ease-out;}
-        #div5 {transition-timing-function: ease-in-out;}
+        
+        #div1 { transition-timing-function: linear; }
+        #div2 { transition-timing-function: ease; }
+        #div3 { transition-timing-function: ease-in; }
+        #div4 { transition-timing-function: ease-out; }
+        #div5 { transition-timing-function: ease-in-out; }
 
         div:hover {
-            width: 400px;
-            height: 400px;
+            width: 250px;
+            height: 250px;
             background-color: rgb(146, 247, 103);
+            border-radius: 50%; 
+            animation: morphAndSpin 2.5s linear ;
+           
         }
     </style>
 </head>
 
 <body>
-    <div>yoyo</div>
-    <div class="div1">1st div</div>
-    <div class="div2">2nd div</div>
-    <div class="div3">3rd div</div>
-    <div class="div4">4th div</div>
-    <div class="div5">5th div</div>
+    
+    <div id="div1">1st div</div>
+    <div id="div2">2nd div</div>
+    <div id="div3">YOYO</div>
+    <div id="div4">4th div</div>
+    <div id="div5">5th div</div>
 </body>
 
 </html>
