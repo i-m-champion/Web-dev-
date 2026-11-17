@@ -18,23 +18,34 @@
         div {
             width: 600px;
             height: 300px;
-            background-color: rgb(249, 136, 101);
+            background-color: rgb(101, 190, 249);
             transition: width 2s, height 2s, background-color 2s;
             display: flex;
             justify-content: center;
             align-items: center;
+            transition-delay: 0.5s;
         }
+        #div1 {transition-timing-function: linear;}
+        #div2 {transition-timing-function: ease;}
+        #div3 {transition-timing-function: ease-in;}
+        #div4 {transition-timing-function: ease-out;}
+        #div5 {transition-timing-function: ease-in-out;}
 
         div:hover {
             width: 400px;
             height: 400px;
-            background-color: rgb(103, 216, 247);
+            background-color: rgb(146, 247, 103);
         }
     </style>
 </head>
 
 <body>
     <div>yoyo</div>
+    <div class="div1">1st div</div>
+    <div class="div2">2nd div</div>
+    <div class="div3">3rd div</div>
+    <div class="div4">4th div</div>
+    <div class="div5">5th div</div>
 </body>
 
 </html>
